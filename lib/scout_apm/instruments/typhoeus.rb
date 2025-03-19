@@ -44,7 +44,7 @@ module ScoutApm
 
         def scout_desc
           "#{self.queued_requests.count} requests:\n" + self.queued_requests.map do |request|
-            "#{request.options[:method].to_s.upcase} #{request.url}"
+            "* #{request.options[:method].to_s.upcase} #{request.url}"
           end.join("\n")
         rescue
           ""
